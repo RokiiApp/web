@@ -1,57 +1,41 @@
 ---
+import ProductHuntIcon from '../components/ProductHuntIcon.astro';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+	<main class="flex flex-wrap columns-2 w-full h-full">
+		<div class="text-center col-span-1 flex flex-col xl:w-1/2 w-full xl:h-full items-center border-b xl:border-r border-gray-600 py-4 px-8 xl:p-32 gap-3">
+			<img src="./favicon.svg" class="w-40" />
+			<h1 class="text-center text-white text-4xl font-bold">Rokii.app</h1>
+			<h2>Productivity booster for Windows</h2>
+			<div class="flex flex-col xl:flex-row gap-4">
+				<ProductHuntIcon />
+				<a href="htttps://github.com/RokiiApp" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 py-2 rounded text-xs xl:text-sm"
+				>🔗 Download Alpha Version</a>
+		</div>
+		</div>
+		<div class="col-span-1 xl:w-1/2 w-full flex flex-col xl:h-full justify-center gap-10 px-8 py-4 xl:p-24">
+			<div>
+				<h3 class="text-3xl font-bold mb-3">Features</h3>
+				<ul class="block text-left w-full">
+					<li>🌓 Light and Dark themes</li>
+					<li>🧑‍💻 Run commands</li>
+					<li>🧠 Cerebro Plugins Support</li>
+					<li>🧪 Experimental Extensions API (commands & scripts)</li>
+				</ul>
+			</div>
+			<img src="./animation.gif" class="rounded-md w-full" />
+		</div>
+
+		
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
 	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+		color: #603cff;
+		text-transform: uppercase;
 	}
 	.instructions {
 		line-height: 1.6;
